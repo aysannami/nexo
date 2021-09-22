@@ -1,0 +1,869 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Nexo</title>
+    <meta name="description" content="Nexo">
+    <meta name="keywords" content="Nexo,Service,Iran">
+    <meta name="author" content="http://ramatec.ir">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/hover-box.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+
+    <!-- JS Include Section -->
+    <!--<script type="text/javascript" src="js/jquery.min.js"></script>-->
+    <script type="text/javascript" src="js/jquery1.min.js"></script>
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
+    <script type="text/javascript" src="js/hover-box.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+                if (scroll > 70) {
+                    $(".r-sec").css("background", "#FFF");
+                    $(".r-sec").css("border-bottom", "1px solid #000");
+                    $(".nav-link").css("color", "#000");
+                }
+                else {
+                    $(".r-sec").css("background", "rgba(238,238,238,0.3)");
+                    $(".nav-link").css("color", "#FFF");
+                }
+            })
+        })
+    </script>
+
+</head>
+<body dir="rtl">
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">ورود به نکسو</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <label class="text-muted text-right">شماره موبایل</label>
+                    <input type="text" name="" class="form-control" placeholder="-------0912">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">ارسال</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Request-->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel1">ثبت درخواست</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <label class="text-muted text-right">شرح درخواست</label>
+                    <textarea class="form-control" name="" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">ارسال</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Request-->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel2">ثبت درخواست</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <label class="text-muted text-right">شماره موبایل</label>
+                    <input type="text" name="" class="form-control" placeholder="-------0912">
+                </div>
+                <div class="row">
+                    <label class="text-muted text-right">شهر</label>
+                    <input type="text" name="" class="form-control">
+                </div>
+                <div class="row">
+                    <label class="text-muted text-right">تخصص</label>
+                    <input type="text" name="" class="form-control">
+                </div>
+                <div class="row">
+                    <label class="text-muted text-right">توضیحات</label>
+                    <textarea class="form-control" name="" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">ارسال</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main-wrapper">
+    <!-- Header Section -->
+    <header id="main-header">
+        <div class="inner-container container-fluid">
+            <div class="r-sec">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">کتاب<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">خدمات نکسو</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تماس با نکسو</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">قوانین و مقررات</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">حریم خصوصی</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <a href="" class="btn btn-primary btn-dl">دانلود اپلیکیشن</a>
+                    </div>
+                    <div>
+                        <a href="" class="btn btn-primary btn-login" type="button" class="btn btn-primary"
+                           data-toggle="modal" data-target="#exampleModal">ورود | ثبت نام</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header Section -->
+    <div class="slider-available-sec">
+        <!-- Main Slider -->
+        <section id="main-slider">
+            <div class="items">
+                <div class="img-container" data-bg-img="img/slider/Slider01.jpg"></div>
+                <!-- Change the URL section based on your image\'s name -->
+                <div class="slide-caption">
+                    <div class="inner-container clearfix">
+                        <div class="down-sec">
+                            <h1>کارهای بیششتری را به نکسو بسپارید</h1>
+                            <p>خدمات مالی،تجاری وحقوقی، از لوله ش و بنا برق کارتا عکاس و وکیل و مشاور</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="items">
+                <div class="img-container" data-bg-img="img/slider/Slider04.jpg"></div>
+                <!-- Change the URL section based on your image\'s name -->
+                <div class="slide-caption">
+                    <div class="inner-container clearfix">
+                        <div class="down-sec">
+                            <h1>خدمات در محل با هزینه مناسب</h1>
+                            <p>کارهای تخصصی خود را به ما بسپارید تا در کمترین زمان اوکی کنیم</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="main-availability-form-1">
+            <div class="inner-container container">
+                <div class="col-md-12 text-center inner-addon left-addon">
+                    <i class="fa fa-search"></i>
+                    <input class="form-control" type="text" placeholder="جستجو کنید">
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-2 service-count">
+                        <p class="num1 counter persian">62</p>
+                        <p>سرویس</p>
+                    </div>
+                    <div class="col-md-2 service-count">
+                        <p class="num1 counter persian">684</p>
+                        <p>متخصص</p>
+                    </div>
+                    <div class="col-md-2 service-count">
+                        <p class="num1 counter persian">2658</p>
+                        <p>کاربر</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="main-availability-form">
+            <div class="inner-container container">
+                <div class="row">
+                    <div class="col-md-2 order-box">
+                        <p class="online">
+                            کارهای خود را آنلاین انجام دهید
+                        </p>
+                        <a href="#" class="btn btn-primary btn-block" type="button" class="btn btn-primary"
+                           data-toggle="modal" data-target="#exampleModal1">ثبت درخواست</a>
+                    </div>
+                    <div class="col-md-9 services-box">
+                        <div class="row">
+                            <div class="col-md-2 service-box service-box-detail">
+                                <img src="img/01.png" alt="">
+                                <p>خدمات ساختمان</p>
+                            </div>
+                            <div class="col-md-2 service-box service-box-detail">
+                                <img src="img/02.jpg" alt="">
+                                <p>خدمات منزل</p>
+                            </div>
+                            <div class="col-md-2 service-box service-box-detail">
+                                <img src="img/03.jpg" alt="">
+                                <p>کامپیوتر و موبایل</p>
+                            </div>
+                            <div class="col-md-2 service-box service-box-detail">
+                                <img src="img/04.jpg" alt="">
+                                <p>مالی،تجاری،حقوقی</p>
+                            </div>
+                            <div class="col-md-2 service-box service-box-detail">
+                                <img src="img/05.jpg" alt="">
+                                <p>سایر خدمات</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<section id="intro">
+    <div class="container mt-4">
+        <p class="text-right nexo">نکسوکیست؟</p>
+        <div class="row">
+            <div class="col-md-6 video-border">
+                <div id="15277516151937578">
+                    <div class="h_iframe-aparat_embed_frame"><span style="display: block;padding-top: 56.2%"></span>
+                        <iframe width="100%" height="100%" allowfullscreen="true" webkitallowfullscreen="true"
+                                mozallowfullscreen="true"
+                                src="https://www.aparat.com/video/video/embed/videohash/P01Ib/vt/frame"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="garanti text-right">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="img/check.jpg">
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <h6>گارانتی</h6>
+                            <p class="description">نکسو کلیه خدمات ارائه شده را تا 30 روز گارانتی میکند</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <img src="img/check.jpg">
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <h6>تضمین کیفیت</h6>
+                            <p class="description">متخصصین نکسو از نظر مهارت انجام کار مورد ارضیابی قرار گرفته اند</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <img src="img/check.jpg">
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <h6>تضمین بازگشت پول</h6>
+                            <p class="description">نکسو کلیه خدمات ارائه شده را تا 30 روز گارانتی میکند</p>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col-md-2">
+                            <img src="img/check.jpg">
+                        </div>
+                        <div class="col-md-10 text-right">
+                            <h6>پشتیبانی24/7</h6>
+                            <p class="description">نکسو کلیه خدمات ارائه شده را تا 30 روز گارانتی میکند</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- REQUEST SECTION -->
+<section id="request" class="mt-4">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container pt-5">
+                    <p class="hidden-sm-down">
+                        تعیین قیمت توسط کارشناسان نکسو در اسرع وقت رایگان انجام می شود
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-left">
+                <a href="#" class="btn btn-success free" type="button" class="btn btn-primary" data-toggle="modal"
+                   data-target="#exampleModal2">درخواست کارشناسی رایگان</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- special offers -->
+<section id="special-offers">
+    <div class="container mt-4">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center">
+                <p class="offer">پیشنهادهای ویژ نکسو</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="hvrbox">
+                    <img src="img/Mr.jpeg" alt="" class="hvrbox-layer_bottom img-fluid img-offer">
+                    <div class="hvrbox-layer_top hvrbox-layer_slideup hvr-offer">
+                        <div class="hvrbox-text">
+                            <p class="kitchen">تجیزات آشپزخانه</p>
+                            <p class="sale">پانزده درصد تخفیف حق الزحمه با کد pL۹۷HT۰۲</p>
+                            <a href="#" class="btn btn-success btn-sm btn-request"> ثبت درخواست</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="hvrbox">
+                            <img src="img/image-2.jpg" alt=""
+                                 class="hvrbox-layer_bottom img-fluid img-offer  img-offer">
+                            <div class="hvrbox-layer_top hvrbox-layer_slideup hvr-offer">
+                                <div class="hvrbox-text">
+                                    <a href="#" class="text-box">خدمات منزل</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="hvrbox">
+                            <img src="img/image-4.jpg" alt=""
+                                 class="hvrbox-layer_bottom img-fluid img-offer  img-offer">
+                            <div class="hvrbox-layer_top hvrbox-layer_slideup hvr-offer hvr-trade">
+                                <div class="hvrbox-text">
+                                    <a href="#" class="text-box">
+                                        <p class="finance">خدمات مالی٬ تجاری وحقوقی</p>
+                                    </a>
+                                    <p class="sale">پانزده درصد تخفیف حق الزحمه با کد pL۹۷HT۰۲</p>
+                                    <a href="#" class="btn btn-success btn-sm btn-request1"> ثبت درخواست</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <div class="hvrbox">
+                            <img src="img/image-3.jpg" alt="" class="hvrbox-layer_bottom img-fluid img-offer">
+                            <div class="hvrbox-layer_top hvrbox-layer_slideup hvr-offer">
+                                <div class="hvrbox-text">
+                                    <a href="#" class="text-box">کامپیوتر و موبایل</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="hvrbox">
+                            <img src="img/image-5.jpg" alt="Mountains" class="hvrbox-layer_bottom img-fluid img-offer">
+                            <div class="hvrbox-layer_top hvrbox-layer_slideup hvr-offer">
+                                <div class="hvrbox-text">
+                                    <a href="#" class="text-box">دکوراسیون و بازسازی</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="hvrbox">
+                            <img src="img/image-6.jpg" alt="Mountains" class="hvrbox-layer_bottom img-fluid img-offer">
+                            <div class="hvrbox-layer_top hvrbox-layer_slideup hvr-offer">
+                                <div class="hvrbox-text">
+                                    <a href="#" class="text-box">عکاسی و مراسم</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SERVICES -->
+<section id="services" class="mt-4">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container pt-5">
+                    <p class="hidden-sm-down price">
+                        سرویس هایی که قیمت آن ها نیاز به کارشناسی دارد٬ قیمت پس از انجام کارشناسی رایگان توسط متخصصین
+                        نکسو اعلام می شود. شما در قبول و یا رد قیمت پیشنهادی مختار هستید </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SUBMIT ORDER -->
+<section id="order" class="mt-4">
+    <div class="row mb-5 order1">
+        <div class="col-md-12 text-center">
+            <p class="offer">چگونه سفارش ثبت کنم؟</p>
+        </div>
+    </div>
+    <div class="tabs text-center">
+        <div class="order2">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="btn btn-primary" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                       aria-controls="pills-home" aria-selected="true">ثبت ساده از طریق اپلیکیشن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" id="pills-profile-tab" data-toggle="pill" href="#pills-profile"
+                       role="tab"
+                       aria-controls="pills-profile" aria-selected="false">ثبت پیشرفته از طریق اپلیکیشن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" id="pills-contact-tab" data-toggle="pill" href="#pills-contact"
+                       role="tab"
+                       aria-controls="pills-contact" aria-selected="false">ثبت ساده از طریق سایت</a>
+                </li>
+            </ul>
+        </div>
+        <div class="tab-content order3" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                <div class="row order3-1">
+                    <div class="col-md-5 tab-text order3-1-1">
+                        <p>
+                            سرویس مورد نظر را انتخاب کنید (تب اول)
+                        </p>
+                    </div>
+                    <div class="col-md-5  order3-1-2">
+                        <img src="img/mobile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade order3-2" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                <div class="row">
+                    <div class="col-md-6 tab-text">
+                        <p>
+                            سرویس مورد نظر را انتخاب کنید (تب دوم)
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/mobile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                <div class="row">
+                    <div class="col-md-6 tab-text">
+                        <p>
+                            سرویس مورد نظر را انتخاب کنید (تب سوم)
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/mobile.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--ONLINE pAYMENT -->
+<section id="payment" class="mt-4">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container pt-5">
+                    <p class="hidden-sm-down price">
+                        در صورت پرداخت آنلاین٬ مبلغ پردات شده نزد نکسو امانت خواهد ماند. زمانی که شما رضایت خود را اعلام
+                        کنید به متخصص پرداخت خواهد شد. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SERVICES -->
+<section id="services2">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-7">
+            <div class="card-container">
+                <div class="card-item cl-1">
+                    <div class="card-box">
+                        <h5><img src="img/03.png" alt=""></h5>
+                        <p>کامپیوتر و موبایل</p>
+                    </div>
+                </div>
+                <div class="card-item cl-1-1">
+                    <div class="card-box">
+                        <h5><img src="img/service-1.png" alt=""></h5>
+                        <p>تاسیسات</p>
+                        <p>لوله کشی آب و شیرآلات، خدمات چاه و فاضلاب،نقاشی ساختمان،برق و روشنایی،کولرگازی،کولر
+                            آبی،تاسیسات مرکزی ساختمان،پمپ . منبع آب ساختمان، پکیج</p>
+                    </div>
+                </div>
+                <div class="card-item cl-2">
+                    <div class="card-box">
+                        <h5>خدمات فنی منزل</h5>
+                        <div class="card-image"><img src="img/service-2.png" alt=""></div>
+                        <div class="text-right">
+                            <p>یخچال فریزیر،ماشین ظرفشویی،ماشین لباسشویی،مایکروویو،کولرگازی،کولرآبی،تلویزیون،لوازم برقی
+                                منزل،لوازم الکترونیکی منزل،دستگاه تصویه آب</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-item cl-3">
+                    <div class="card-box">
+                        <h5><img src="img/service-3.png" alt=""></h5>
+                        <p>سبک زندگی</p>
+                    </div>
+                </div>
+                <div class="card-item cl-4">
+                    <div class="card-box">
+                        <h5><img src="img/service-4.png" alt=""></h5>
+                        <p>سیستم های امنیتی و حفاظتی</p>
+                    </div>
+                </div>
+                <div class="card-item cl-5">
+                    <div class="card-box">
+                        <h5><img src="img/service-5.png" alt=""></h5>
+                        <p>بازسازی و نوسازی</p>
+                    </div>
+                </div>
+                <div class="card-item cl-6">
+                    <div class="card-box">
+                        <h5><img src="img/service-7.png" alt=""></h5>
+                        <p>خدمات ساختمان</p>
+                        <p>بنایی،نصب ایزوگام،گچ کاری و گچ بری،کاشی کاری و موزائیک،خدمات برق و روشنایی،درب و کرکره
+                            اتوماتیک،دوربین مداربسته،دزدگیر و سیستم های امنیتی،آهنگری و جوشکاری،لوله کشی گازو نصب
+                            تجهیراتگازی،تاسیسات مرکزی ساختمان،پمپ</p>
+                    </div>
+                </div>
+                <div class="card-item cl-7">
+                    <div class="card-box">
+                        <h5>خدمات فنی منزل</h5>
+                        <div class="card-image"><img src="img/service-6.png" alt=""></div>
+                        <div class="text-right">
+                            <p>وکالت،ثبت شرکت،ثبت برند،امور قراردادی،مشاوره حقوقی،نگارش دادخواست</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</section>
+<!-- SOCIAL MEDIA -->
+<section id="social-media">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container pt-5">
+                    <p class="hidden-sm-down price mt-4">
+                        برای اطلاع از تخفیف های نکسو٬ عضو شبکه های اجتماعی ما شوید
+                    </p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <a href=""><img src="img/whatsapp.png"></a>
+                        <a href=""><img src="img/telegram.png"></a>
+                        <a href=""><img src="img/twitter.png"></a>
+                        <a href=""><img src="img/instagram.png"></a>
+                        <a href=""><img src="img/google.jpg"></a>
+                        <a href=""><img src="img/facebook.png"></a>
+                        <a href=""><img src="img/linkedin.png"></a>
+                        <a href=""><img src="img/skype.png"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="customer-opinion" class="mt-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h5 class="opinion">دیگران در مورد نکسو چه می گویند؟</h5>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-block justify-content-center text-center">
+                        <img src="img/customer-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                        <p class="text-muted">آقای محمد قنبری</p>
+                        <p class="user-opinion text-center text-muted">
+                            کیفیت کار خوب بود و تقریبا همون ساعتی که گفتن انجام شد. اولین بار بود از اپلیکیشن های
+                            اینچنینی استفاده می کردم و حتما بازم استفاده می کنم </p>
+                        <p class="text-muted special">متخصص</p>
+                        <img src="img/customer-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-1">
+                        <p class="text-muted name">آقای محمد قنبری</p>
+                        <button class="btn btn-primary persian">4.5 <i class="fa fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-block justify-content-center text-center">
+                        <img src="img/customer-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                        <p class="text-muted">آقای محمد قنبری</p>
+                        <p class="user-opinion text-center text-muted">
+                            کیفیت کار خوب بود و تقریبا همون ساعتی که گفتن انجام شد. اولین بار بود از اپلیکیشن های
+                            اینچنینی استفاده می کردم و حتما بازم استفاده می کنم </p>
+                        <p class="text-muted special">متخصص</p>
+                        <img src="img/customer-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-1">
+                        <p class="text-muted name">آقای محمد قنبری</p>
+                        <button class="btn btn-primary persian">4.5 <i class="fa fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-block justify-content-center text-center">
+                        <img src="img/customer-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                        <p class="text-muted">آقای محمد قنبری</p>
+                        <p class="user-opinion text-center text-muted">
+                            کیفیت کار خوب بود و تقریبا همون ساعتی که گفتن انجام شد. اولین بار بود از اپلیکیشن های
+                            اینچنینی استفاده می کردم و حتما بازم استفاده می کنم </p>
+                        <p class="text-muted special">متخصص</p>
+                        <img src="img/customer-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-1">
+                        <p class="text-muted name">آقای محمد قنبری</p>
+                        <button class="btn btn-primary persian">4.5 <i class="fa fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-block justify-content-center text-center">
+                        <img src="img/customer-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                        <p class="text-muted">آقای محمد قنبری</p>
+                        <p class="user-opinion text-center text-muted">
+                            کیفیت کار خوب بود و تقریبا همون ساعتی که گفتن انجام شد. اولین بار بود از اپلیکیشن های
+                            اینچنینی استفاده می کردم و حتما بازم استفاده می کنم </p>
+                        <p class="text-muted special">متخصص</p>
+                        <img src="img/customer-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-1">
+                        <p class="text-muted name">آقای محمد قنبری</p>
+                        <button class="btn btn-primary persian">4.5 <i class="fa fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <div class="card-block text-center">
+                        <img src="img/customer-1.jpg" alt="" class="img-fluid rounded-circle w-50 mb-3">
+                        <p class="text-muted">آقای محمد قنبری</p>
+                        <p class="user-opinion text-center text-muted">
+                            کیفیت کار خوب بود و تقریبا همون ساعتی که گفتن انجام شد. اولین بار بود از اپلیکیشن های
+                            اینچنینی استفاده می کردم و حتما بازم استفاده می کنم </p>
+                        <p class="text-muted special">متخصص</p>
+                        <img src="img/customer-2.jpg" alt="" class="img-fluid rounded-circle w-50 mb-1">
+                        <p class="text-muted name">آقای محمد قنبری</p>
+                        <button class="btn btn-primary persian">4.5 <i class="fa fa-star"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+</section>
+<section id="contact" class="mt-4">
+    <div class="dark-overlay">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="container pt-5">
+                    <p class="hidden-sm-down price">نکسو، یک ارتباط هوشمند</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="application" class="mt-4">
+    <div class="row">
+        <div class="col-md-6 text-center application1">
+            <img src="img/application.jpg" alt="">
+        </div>
+        <div class="col-md-5 text-right application2">
+            <div class="row">
+                <div class="col-md-12">
+                    <h6>اپلیکیشن نکسو، همراه همیشگی شما</h6>
+                </div>
+                <div class="col-md-12 text-muted text-right">
+                    <p>با نصب اپلیکیشن نکسو بر روی تلفن همراه خود به صدها خدمت در جیب خود دسترسی داشته باشید.</p>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-12 text-center mb-3">
+                    <h6>دریافت لینک دانلود از طریق شماره موبایل</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-8 inp">
+                    <input type="text" class="form-control" placeholder="لطفا شماره موبایل خود را وارد کنید">
+                </div>
+                <div class="col-md-4">
+                    <button type="submit" class="btn btn-primary">ارسال لینک</button>
+                </div>
+            </div>
+            <div class="row app-dl">
+                <div class="col-md-3">
+                    <p>دریافت از طریق</p>
+                </div>
+                <div class="col-md-8 text-left">
+                    <div><a href=""> <img src="img/google-play.jpg" alt=""></a></div>
+                    <div><a href=""> <img src="img/bazar.jpg" alt=""></a></div>
+                    <div><a href=""> <img src="img/sib.jpg" alt=""></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="enroll" class="mt-4">
+    <div class="row">
+        <div class="col-md-6 enroll-text">
+            <h5>عضو متخصص نکسو شوید</h5>
+            <p class="hidden-sm-down">برای اینکه به جمع متخصصین نکسو بپیوندید، با زدن دکمه زیر، فرم درخواست را پر کرده و
+                یا با واحد جذب متخصصین تماس بگیرید</p>
+            <button class="btn btn-primary">درخواست عضویت</button>
+        </div>
+        <div class="col-md-6 enroll-img">
+            <img src="img/enroll-personjpg.png" alt="">
+        </div>
+    </div>
+</section>
+<footer class="text-right">
+    <div class="row footer1">
+        <div class="col-md-3">
+            <h6>خدمات ساختمان</h6>
+            <ul>
+                <li>بنایی</li>
+                <li>نصب ایزوگام</li>
+                <li>گچ کاری و گچ بری</li>
+                <li>کاشی کاری و موزائیک</li>
+                <li>خدمات برق و روشنایی</li>
+                <li>درب و کرکره اتوماتیک</li>
+                <li>دوربین مداربسته</li>
+                <li>دزدگیر و سیستم امنیتی</li>
+                <li>آهنگری و جوشکاری</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6>خدمات ساختمان</h6>
+            <ul>
+                <li>بنایی</li>
+                <li>نصب ایزوگام</li>
+                <li>گچ کاری و گچ بری</li>
+                <li>کاشی کاری و موزائیک</li>
+                <li>خدمات برق و روشنایی</li>
+                <li>درب و کرکره اتوماتیک</li>
+                <li>دوربین مداربسته</li>
+                <li>دزدگیر و سیستم امنیتی</li>
+                <li>آهنگری و جوشکاری</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6>خدمات ساختمان</h6>
+            <ul>
+                <li>بنایی</li>
+                <li>نصب ایزوگام</li>
+                <li>گچ کاری و گچ بری</li>
+                <li>کاشی کاری و موزائیک</li>
+                <li>خدمات برق و روشنایی</li>
+                <li>درب و کرکره اتوماتیک</li>
+                <li>دوربین مداربسته</li>
+                <li>دزدگیر و سیستم امنیتی</li>
+                <li>آهنگری و جوشکاری</li>
+            </ul>
+        </div>
+        <div class="col-md-3">
+            <h6>خدمات ساختمان</h6>
+            <ul>
+                <li>بنایی</li>
+                <li>نصب ایزوگام</li>
+                <li>گچ کاری و گچ بری</li>
+                <li>کاشی کاری و موزائیک</li>
+                <li>خدمات برق و روشنایی</li>
+                <li>درب و کرکره اتوماتیک</li>
+                <li>دوربین مداربسته</li>
+                <li>دزدگیر و سیستم امنیتی</li>
+                <li>آهنگری و جوشکاری</li>
+            </ul>
+        </div>
+    </div>
+    <div class="row footer2">
+        <div class="col-md-3 ml-5">
+            <h6>نکسو کیست؟</h6>
+            <p>نکسو به شما کمک می کند تا خدمات تخصصی، فنی و عمومی خود را تنها با چند کلیک، از بهترین متخصصین شهرتان
+                دریافت کنید.</p>
+            <p>دریافت کیفیت بالاتر به ازای هزینه پرداخت شده، هدف اصلی نکسو است.گارانتی، قیمت مقرون به صرفه، سرعت و
+                دسترسی 24 ساعته در 7 روز هفته و</p>
+        </div>
+        <div class="col-md-4">
+            <h6 class="pb-4">تماس با نکسو</h6>
+            <p class="persian">تلفن واحد مشتریان: 02128421104</p>
+            <p class="persian">تلفن واحد متخصصین: 02128421105</p>
+            <p class="pt-2">آدرس: تهران، خیابان انقلاب، چهارراه ولیعصر، کوچه بالاور، پلاک 7</p>
+        </div>
+        <div class="col-md-4">
+            <h6 class="pb-5">نماد اعتماد به نکسو</h6>
+            <img src="img/enamad.jpg" alt="">
+            <img src="img/ebussiness.jpg" alt="">
+            <img src="img/etemad.jpg" alt="">
+            <img src="img/senfi.jpg" alt="">
+        </div>
+    </div>
+    <div class="row footer3">
+        <div class="col-md-12 text-left">
+            <p>2018 نکسو | ارائه آنلاین خدمات فنی و تخصصی</p>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="js/counterup.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script>
+    jQuery(document).ready(function ($) {
+        $('.counter').counterUp({
+            delay: 10,
+            time: 5000
+        });
+    });
+</script>
+</body>
+</html>
